@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="crousalModel"
+            type="com.ashish.hopscotchproject.ViewModel.MovieCrousalViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/container_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/iv_movie"
+            android:layout_width="70dp"
+            android:layout_height="100dp"
+            android:layout_margin="5dp"
+            app:imageUrl="@{crousalModel.getUrl()}" />
+
+
+    </RelativeLayout>
+
+
+</layout>
